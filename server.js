@@ -5,6 +5,8 @@ const app = express();
 
 connectDB();
 
+app.use(express.json({ extended: false }));
+
 app.get('/', (request, response) => response.json({ msg: 'Welcome to the ContactKeeper API...' }));
 
 app.use('/api/users', require('./routes/users'));
