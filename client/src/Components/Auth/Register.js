@@ -11,7 +11,6 @@ const Register = props => {
 
     useEffect(() => {
         if (isAuthenticated) {
-            console.log('Auth push?');
             props.history.push('/');
         }
 
